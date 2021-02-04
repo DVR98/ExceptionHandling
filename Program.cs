@@ -56,7 +56,7 @@ namespace ExceptionHandling
         public static void CatchingMultipleExceptions()
         {
             //Instruct user
-            Console.WriteLine("Please enter a number");
+            Console.WriteLine("Please enter a number(Enter Letter/Word to catch format exception)");
 
             //Get user input
             string s = Console.ReadLine();
@@ -92,7 +92,7 @@ namespace ExceptionHandling
         public static void ExceptionProperties()
         {
             //Guide user
-            Console.WriteLine("Please enter a number");
+            Console.WriteLine("Please enter a number(Enter Letter/Word to catch format exception)");
 
             try
             {
@@ -148,6 +148,7 @@ namespace ExceptionHandling
             ExceptionDispatchInfo possibleException = null;
 
             try {
+                Console.WriteLine("Please enter any value");
                 //Get user input
                 string s = Console.ReadLine();
                 //Possible format exception
@@ -189,7 +190,7 @@ namespace ExceptionHandling
                 OrderId = orderId;
                 this.HelpLink = "http://www.mydomain.com/infoaboutexception";
             }
-            
+
             protected OrderProcessingException(SerializationInfo info, StreamingContext context)
             {
                 OrderId = (int)info.GetValue("OrderId", typeof(int));
@@ -202,11 +203,5 @@ namespace ExceptionHandling
                 info.AddValue("OrderId", OrderId, typeof(int));
             }
         }
-
-
-
-
-
-
     }
 }
