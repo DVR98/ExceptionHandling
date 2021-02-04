@@ -13,6 +13,7 @@ namespace ExceptionHandling
             Console.WriteLine("Please enter 1 to run Catching Multiple Exceptions method");
             Console.WriteLine("Please enter 2 to Exception Properties method");
             Console.WriteLine("Please enter 3 to Dispatch Info method");
+            Console.WriteLine("To see custom exception: Custom Exception starts at line 168 in Program.cs");
 
             try {
                 switch(Console.ReadLine()){
